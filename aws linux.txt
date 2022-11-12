@@ -1,0 +1,15 @@
+installing chrome  
+curl https://intoli.com/install-google-chrome.sh | bash
+
+checking chrome version
+google-chrome --version
+
+from selenium import webdriver
+browser = webdriver.Chrome()
+browser.get("http://selenium.org/")
+
+check e-mail
+cat /var/spool/mail/ec2-user
+
+crontab -e
+*/1 10 * * * /bin/bash /home/ec2-user/auto_login/auto_login/run.sh
