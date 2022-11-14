@@ -72,5 +72,49 @@ Type=simple
 Restart=always
 RestartSec=0
 ExecStart=/home/ec2-user/auto_login/auto_login/mrs2.py
-[insstall]
+[install]
+WantedBy=multi-user.target
+
+sudo systemctl list-units --type service
+joj
+et the status os .service file
+journalctl -S today -u book-scraper.service
+
+
+export PYTHONPATH="/Users/my_user/code"
+
+
+To set the python environment variable PYTHONPATH on Linux, follow the given steps:
+
+Step 1: Open up the terminal 
+
+Step 2: In your text editor, open the ~/.bashrc  file. For example: atom ~/.bashrc;
+
+Step 3: In this text editor, add this line at the end:
+
+export PYTHONPATH=/home/my_user/code
+
+Step 4: Save this text editor file.
+
+Step 5: Close the terminal application 
+
+Step 6: Restart the terminal application. You can read in the new settings. Type:
+
+echo $PYTHONPATH
+
+It will show something like /home/my_user/code:
+
+
+[Unit]
+Description=My test service
+After=multi-user.target
+
+[Service]
+User=ec2-user
+Type=simple
+Restart=always
+WorkingDirectory=/home/ec2-user/auto_login/auto_login
+ExecStart=/usr/bin/python3 /home/ec2-user/auto_login/auto_login/hllist.py
+
+[Install]
 WantedBy=multi-user.target
