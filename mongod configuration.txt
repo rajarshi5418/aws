@@ -1,0 +1,16 @@
+sudo vim /etc/mongod.conf
+bindIP : 0.0.0.0
+
+creating user
+db.createUser({user:"admin", pwd:"5418",roles: [{ role: "root", db:"admin"}]})
+
+configure following file
+sudo nano /lib/systemd/system/mongod.service
+
+ExecStart=/usr/bin/mongod --quiet --auth --config /etc/mongod.conf
+
+connecting mongod
+mongo -u admin -p --authenticationDatabase admin
+
+check status
+db.runCommand({connectionStatus:1})
