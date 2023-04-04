@@ -1,0 +1,12 @@
+*/1 20-21 * * * /bin/bash /home/ec2-user/auto_login/auto_login/run.sh
+1 9 * * * /bin/bash /home/ec2-user/stock-list.sh
+46 9 * * * /bin/bash /home/ec2-user/srun3.sh
+1 1 * * * /bin/bash /home/ec2-user/auto_login/auto_login/maxpain/trade_value.sh
+*/5 9-15 * * * /bin/bash /home/ec2-user/auto_login/auto_login/maxpain/maxpain.sh
+1 10 * * * /bin/bash /home/ec2-user/stock_list_nse.sh
+*/6 9-15 * * * /bin/bash /home/ec2-user/auto_login/auto_login/maxpain/maxpain_gen.sh
+10 10 * * * /bin/bash /home/ec2-user/ema_trade.sh
+15 9 * * * /bin/bash /home/ec2-user/maxpain_trade.sh
+30 14 * * * /bin/bash /home/ec2-user/sstop.sh
+7 15 * * * /bin/bash /home/ec2-user/squareoff.sh
+
